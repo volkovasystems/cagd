@@ -4,18 +4,27 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>QUnit Example</title>
+	<title>Cagd QUnit Example</title>
 	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+	<script type="application/javascript" src="./cagd.deploy.js"></script>
 </head>
 
 <body>
 	<div id="qunit"></div>
 	<div id="qunit-fixture"></div>
-	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-	<script type="application/javascript" src="./cagd.deploy.js"></script>
+
 	<script>
-		QUnit.test( "hello test", function( assert ) {
-		assert.ok( 1 == "1", "Cagd Passed!" );
+		QUnit.test("equal test", function (assert) {
+			let test = {};
+			cagd("hello", "world", test);
+			let descriptor = Object.getOwnPropertyDescriptor(test, "hello");
+			assert.equal(test.hello, "world", "should have value 'hello'");
+			assert.equal(descriptor.configurable, true, "should be true");
+			assert.equal(descriptor.enumerable, true, "should be true");
+			assert.equal(descriptor.writable, false, "should be false");
+			cagd("hello", "value", test);
+			assert.equal(test.hello, "value", "should have value 'hello'");
 		});
 	</script>
 </body>
