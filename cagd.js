@@ -78,7 +78,6 @@ const cagd = function cagd( property, value, entity ){
 			}
 		@end-meta-configuration
 	*/
-
 	if( falzy( property ) || !protype( property, NUMBER + STRING ) ){
 		throw new Error( "invalid property" );
 	}
@@ -88,7 +87,6 @@ const cagd = function cagd( property, value, entity ){
 	try{
 		Object.defineProperty( entity, property, {
 			"value": value,
-
 			"configurable": true,
 			"enumerable": true,
 			"writable": false
