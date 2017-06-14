@@ -1,8 +1,33 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./cagd.deploy.js">
-		</script>
+		<title>cagd unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./cagd.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "cagd unit test", function( assert ) {
+
+				let test = {};
+				cagd( "hello", "world", test );
+
+				let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+				assert.equal( test.hello, "world", "should have value 'hello'" );
+				assert.equal( descriptor.configurable, true, "should be true" );
+				assert.equal( descriptor.enumerable, true, "should be true" );
+				assert.equal( descriptor.writable, false, "should be false" );
+
+			} );
+		</script>
+	</body>
 </html>
