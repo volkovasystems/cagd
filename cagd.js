@@ -32,11 +32,11 @@
 			"file": "cagd.js",
 			"module": "cagd",
 			"author": "Richeve S. Bebedor",
+			"email": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-				"Vinse Vinalon"
+				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
-			"email": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/cagd.git",
 			"test": "cagd-test.js",
 			"global": true

@@ -1,13 +1,13 @@
 {
   "name": "cagd",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Caged property to entity.",
   "main": "cagd.deploy.js",
   "support": "cagd.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon"
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -27,7 +27,7 @@
   "dependencies": {
     "falzy": "^0.20.0",
     "protype": "^0.22.0",
-    "wichevr": "^0.10.0",
+    "wichevr": "^0.13.0",
     "zelf": "^0.12.0"
   }
 }
