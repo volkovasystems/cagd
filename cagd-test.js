@@ -6,12 +6,12 @@ cagd( "hello", "world", test );
 
 let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
 
-assert.equal( test.hello, "world", "should have value 'hello'" );
+assert.equal( test.hello, "world", "should be equal to 'hello'" );
 
-assert.equal( descriptor.configurable, true, "should be true" );
+assert.equal( descriptor.configurable, true, "should be equal to true" );
 
-assert.equal( descriptor.enumerable, true, "should be true" );
+assert.equal( descriptor.enumerable, true, "should be equal to true" );
 
-assert.equal( descriptor.writable, false, "should be false" );
+assert.equal( descriptor.writable, false, "should be equal to false" );
 
 console.log( "ok" );
