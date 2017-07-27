@@ -1,33 +1,33 @@
 {
-  "name": "cagd",
-  "version": "0.3.0",
-  "description": "Caged property to entity.",
-  "main": "cagd.deploy.js",
-  "support": "cagd.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "caged",
-    "property",
-    "entity",
-    "cagd"
-  ],
-  "homepage": "https://github.com/volkovasystems/cagd",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "protype": "^0.22.0",
-    "wichevr": "^0.13.0",
-    "zelf": "^0.12.0"
-  }
+	"name": "cagd",
+	"version": "0.4.0",
+	"description": "Caged property to entity.",
+	"main": "cagd.deploy.js",
+	"support": "cagd.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"caged",
+		"property",
+		"entity",
+		"cagd"
+	],
+	"homepage": "https://github.com/volkovasystems/cagd",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"falzy": "^0.23.0",
+		"protype": "^0.24.0",
+		"wichevr": "^0.14.0",
+		"zelf": "^0.14.0"
+	}
 }
