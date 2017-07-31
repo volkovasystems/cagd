@@ -1,0 +1,37 @@
+{ value: 123,
+  writable: false,
+  enumerable: true,
+  configurable: true }
+ok
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2017-07-31T12:47:18.740Z",
+    "end": "2017-07-31T12:47:18.746Z",
+    "duration": 6
+  },
+  "tests": [
+    {
+      "title": "\"should be equal to { \"sample\": 123 }\"",
+      "fullTitle": "cagd \"cagd( \"sample\", 123, test )\" \"should be equal to { \"sample\": 123 }\"",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "\"should be equal to { \"sample\": 123 }\"",
+      "fullTitle": "cagd \"cagd( \"sample\", 123, test )\" \"should be equal to { \"sample\": 123 }\"",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
