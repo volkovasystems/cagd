@@ -133,7 +133,7 @@ describe( "cagd", ( ) => {
 	describe( "Property descriptor configurable", ( ) => {
 
 		it( "should be equal to true", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 				function( ){
 					let test = { };
@@ -142,7 +142,7 @@ describe( "cagd", ( ) => {
 					return descriptor.configurable;
 				}
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, true );
 
 		} );
@@ -153,7 +153,7 @@ describe( "cagd", ( ) => {
 	describe( "Property descriptor enumerable", ( ) => {
 
 		it( "should be equal to true", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 				function( ){
 					let test = { };
@@ -162,7 +162,7 @@ describe( "cagd", ( ) => {
 					return descriptor.enumerable;
 				}
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, true );
 
 		} );
@@ -173,7 +173,7 @@ describe( "cagd", ( ) => {
 	describe( "Property descriptor writable", ( ) => {
 
 		it( "should be equal to false", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 				function( ){
 					let test = { };
@@ -182,7 +182,7 @@ describe( "cagd", ( ) => {
 					return descriptor.writable;
 				}
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, false );
 
 		} );
