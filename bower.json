@@ -1,26 +1,32 @@
 {
-	"name": "cagd",
-	"version": "0.1.0",
-	"description": "Caged property to entity.",
-	"main": "cagd.deploy.js",
-	"support": "cagd.support.js",
-	"authors": [
-		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-	],
-	"license": "MIT",
-	"keywords": [
-		"caged",
-		"property",
-		"entity",
-		"cagd"
-	],
-	"homepage": "https://github.com/volkovasystems/cagd",
-	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components",
-		"test",
-		"tests"
-	]
+  "name": "cagd",
+  "version": "0.1.0",
+  "description": "Caged property to entity.",
+  "main": "cagd.deploy.js",
+  "support": "cagd.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "caged",
+    "property",
+    "entity",
+    "cagd"
+  ],
+  "homepage": "https://github.com/volkovasystems/cagd",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "falzy": "^0.23.0",
+    "protype": "^0.24.0",
+    "wichevr": "^0.14.0",
+    "zelf": "^0.14.0"
+  }
 }
