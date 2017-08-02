@@ -72,7 +72,7 @@ const path = require( "path" );
 //: @server:
 
 describe( "cagd", ( ) => {
-	
+
 	describe( `"cagd( "sample", 123, test )"`, ( ) => {
 		it( `"should be equal to { "sample": 123 }"`, ( ) => {
 
@@ -80,7 +80,7 @@ describe( "cagd", ( ) => {
 			assert.deepEqual( cagd( "sample", 123, test ), { "sample": 123 } );
 
 		} );
-	} );	
+	} );
 } );
 
 
@@ -90,7 +90,7 @@ describe( "cagd", ( ) => {
 //: @client:
 
 describe( "cagd", ( ) => {
-	
+
 	describe( `"cagd( "sample", 123, test )"`, ( ) => {
 		it( `"should be equal to { "sample": 123 }"`, ( ) => {
 
@@ -98,7 +98,7 @@ describe( "cagd", ( ) => {
 			assert.deepEqual( cagd( "sample", 123, test ), { "sample": 123 } );
 
 		} );
-	} );	
+	} );
 } );
 
 
@@ -109,35 +109,86 @@ describe( "cagd", ( ) => {
 
 describe( "cagd", ( ) => {
 
-	
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"cagd( "sample", 123, test )"`, ( ) => {
-		it( `"should be equal to { "sample": 123 }"`, ( ) => {
+	describe( `"impel( "property", "value" )"`, ( ) => {
 
-		assert.equal(disdo ( true, true ) );
+		it( "should be equal to value", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					let test = { };
+					cagd( "hello", "world", test );
+					return test.hello;
+				}
+			).value;
+
+			assert.equal( result, "world" );
 
 		} );
-	} );	
+
+	} );
 
 
-	
+	describe( "Property descriptor configurable", ( ) => {
+
+		it( "should be equal to true", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					let test = { };
+					cagd( "hello", "world", test );
+					let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+					return descriptor.configurable;
+				}
+			).value;
+
+			assert.equal( result, true );
+
+		} );
+
+	} );
+
+
+	describe( "Property descriptor enumerable", ( ) => {
+
+		it( "should be equal to true", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					let test = { };
+					cagd( "hello", "world", test );
+					let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+					return descriptor.enumerable;
+				}
+			).value;
+
+			assert.equal( result, true );
+
+		} );
+
+	} );
+
+
+	describe( "Property descriptor writable", ( ) => {
+
+		it( "should be equal to false", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+				function( ){
+					let test = { };
+					cagd( "hello", "world", test );
+					let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+					return descriptor.writable;
+				}
+			).value;
+
+			assert.equal( result, false );
+
+		} );
+
+	} );
+
 } );
 
 //: @end-bridge
-
-
-
-
-
-// const assert = require( "assert" );
-// const cagd = require( "./cagd.js" );
-
-let test = { };
-assert.deepEqual( cagd( "sample", 123, test ), { "sample": 123 } );
-
-console.log( Object.getOwnPropertyDescriptor( test, "sample" ) );
-
-console.log( "ok" );
