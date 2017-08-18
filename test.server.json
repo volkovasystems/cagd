@@ -1,8 +1,3 @@
-{ value: 123,
-  writable: false,
-  enumerable: true,
-  configurable: true }
-ok
 {
   "stats": {
     "suites": 2,
@@ -10,15 +5,15 @@ ok
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-31T12:47:18.740Z",
-    "end": "2017-07-31T12:47:18.746Z",
-    "duration": 6
+    "start": "2017-08-18T02:39:21.369Z",
+    "end": "2017-08-18T02:39:21.383Z",
+    "duration": 15
   },
   "tests": [
     {
       "title": "\"should be equal to { \"sample\": 123 }\"",
       "fullTitle": "cagd \"cagd( \"sample\", 123, test )\" \"should be equal to { \"sample\": 123 }\"",
-      "duration": 1,
+      "duration": 6,
       "currentRetry": 0,
       "err": {}
     }
@@ -29,7 +24,7 @@ ok
     {
       "title": "\"should be equal to { \"sample\": 123 }\"",
       "fullTitle": "cagd \"cagd( \"sample\", 123, test )\" \"should be equal to { \"sample\": 123 }\"",
-      "duration": 1,
+      "duration": 6,
       "currentRetry": 0,
       "err": {}
     }
