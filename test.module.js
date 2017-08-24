@@ -74,7 +74,7 @@ const path = require( "path" );
 describe( "cagd", ( ) => {
 
 	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
-		it( "should be equal to 'world'", ( ) => {
+		it( "should contain hello property with a value of 'world'", ( ) => {
 
 			let test = { };
 			cagd( "hello", "world", test );
@@ -133,7 +133,7 @@ describe( "cagd", ( ) => {
 describe( "cagd", ( ) => {
 
 	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
-		it( "should be equal to 'world'", ( ) => {
+		it( "should contain hello property with a value of 'world'", ( ) => {
 
 			let test = { };
 			cagd( "hello", "world", test );
@@ -194,7 +194,7 @@ describe( "cagd", ( ) => {
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
 	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
-		it( "should be equal to 'world'", ( ) => {
+		it( "should contain hello property with a value of 'world'", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 				function( ){
