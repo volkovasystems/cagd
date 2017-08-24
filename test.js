@@ -69,16 +69,57 @@ const cagd = require( "./cagd.js" );
 
 describe( "cagd", ( ) => {
 
-	describe( `"cagd( "sample", 123, test )"`, ( ) => {
-		it( `"should be equal to { "sample": 123 }"`, ( ) => {
+	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
+		it( "should contain hello property with a value of 'world'", ( ) => {
 
 			let test = { };
-			assert.deepEqual( cagd( "sample", 123, test ), { "sample": 123 } );
+			cagd( "hello", "world", test );
+
+			assert.equal( test.hello, "world" );
 
 		} );
 	} );
-} );
 
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.configurable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.writable, false );
+
+		} );
+	} );
+
+} );
 
 //: @end-server
 

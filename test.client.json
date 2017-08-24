@@ -1,0 +1,180 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-24T06:46:19.231Z",
+	"end": "2017-08-24T06:46:56.608Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "cagd",
+			"duration": 0,
+			"start": "2017-08-24T06:46:56.223Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "cagd",
+			"duration": 209,
+			"start": "2017-08-24T06:46:56.223Z",
+			"end": "2017-08-24T06:46:56.432Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-24T06:46:56.224Z",
+					"end": "2017-08-24T06:46:56.225Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should contain hello property with a value of 'world'"
+				},
+				{
+					"start": "2017-08-24T06:46:56.313Z",
+					"end": "2017-08-24T06:46:56.313Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should contain hello property with a value of 'world'"
+				},
+				{
+					"start": "2017-08-24T06:46:56.315Z",
+					"end": "2017-08-24T06:46:56.315Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-24T06:46:56.358Z",
+					"end": "2017-08-24T06:46:56.358Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-24T06:46:56.359Z",
+					"end": "2017-08-24T06:46:56.359Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-24T06:46:56.395Z",
+					"end": "2017-08-24T06:46:56.395Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-08-24T06:46:56.396Z",
+					"end": "2017-08-24T06:46:56.396Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-24T06:46:56.432Z",
+					"end": "2017-08-24T06:46:56.432Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "cagd",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-08-24T06:46:56.432Z",
+					"end": "2017-08-24T06:46:56.432Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "cagd"
+				}
+			]
+		},
+		{
+			"name": "`cagd( 'hello', 'world', { } )`",
+			"duration": 90,
+			"start": "2017-08-24T06:46:56.224Z",
+			"end": "2017-08-24T06:46:56.314Z",
+			"tests": [
+				{
+					"name": "should contain hello property with a value of 'world'",
+					"start": "2017-08-24T06:46:56.224Z",
+					"end": "2017-08-24T06:46:56.312Z",
+					"duration": 88,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor configurable`",
+			"duration": 44,
+			"start": "2017-08-24T06:46:56.314Z",
+			"end": "2017-08-24T06:46:56.358Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-24T06:46:56.315Z",
+					"end": "2017-08-24T06:46:56.358Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor enumerable`",
+			"duration": 36,
+			"start": "2017-08-24T06:46:56.359Z",
+			"end": "2017-08-24T06:46:56.395Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-08-24T06:46:56.359Z",
+					"end": "2017-08-24T06:46:56.395Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`Property descriptor writable`",
+			"duration": 36,
+			"start": "2017-08-24T06:46:56.396Z",
+			"end": "2017-08-24T06:46:56.432Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-08-24T06:46:56.396Z",
+					"end": "2017-08-24T06:46:56.432Z",
+					"duration": 36,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

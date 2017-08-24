@@ -1,32 +1,74 @@
 {
-  "stats": {
-    "suites": 2,
-    "tests": 1,
-    "passes": 1,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-18T02:39:21.369Z",
-    "end": "2017-08-18T02:39:21.383Z",
-    "duration": 15
-  },
-  "tests": [
-    {
-      "title": "\"should be equal to { \"sample\": 123 }\"",
-      "fullTitle": "cagd \"cagd( \"sample\", 123, test )\" \"should be equal to { \"sample\": 123 }\"",
-      "duration": 6,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "\"should be equal to { \"sample\": 123 }\"",
-      "fullTitle": "cagd \"cagd( \"sample\", 123, test )\" \"should be equal to { \"sample\": 123 }\"",
-      "duration": 6,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-24T06:46:18.114Z",
+		"end": "2017-08-24T06:46:18.120Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should contain hello property with a value of 'world'",
+			"fullTitle": "cagd `cagd( 'hello', 'world', { } )` should contain hello property with a value of 'world'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "cagd `Property descriptor configurable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "cagd `Property descriptor enumerable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cagd `Property descriptor writable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should contain hello property with a value of 'world'",
+			"fullTitle": "cagd `cagd( 'hello', 'world', { } )` should contain hello property with a value of 'world'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "cagd `Property descriptor configurable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "cagd `Property descriptor enumerable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "cagd `Property descriptor writable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
