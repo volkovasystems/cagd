@@ -73,16 +73,57 @@ const path = require( "path" );
 
 describe( "cagd", ( ) => {
 
-	describe( `"cagd( "sample", 123, test )"`, ( ) => {
-		it( `"should be equal to { "sample": 123 }"`, ( ) => {
+	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
+		it( "should be equal to 'world'", ( ) => {
 
 			let test = { };
-			assert.deepEqual( cagd( "sample", 123, test ), { "sample": 123 } );
+			cagd( "hello", "world", test );
+
+			assert.equal( test.hello, "world" );
 
 		} );
 	} );
-} );
 
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.configurable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.writable, false );
+
+		} );
+	} );
+
+} );
 
 //: @end-server
 
@@ -91,16 +132,57 @@ describe( "cagd", ( ) => {
 
 describe( "cagd", ( ) => {
 
-	describe( `"cagd( "sample", 123, test )"`, ( ) => {
-		it( `"should be equal to { "sample": 123 }"`, ( ) => {
+	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
+		it( "should be equal to 'world'", ( ) => {
 
 			let test = { };
-			assert.deepEqual( cagd( "sample", 123, test ), { "sample": 123 } );
+			cagd( "hello", "world", test );
+
+			assert.equal( test.hello, "world" );
 
 		} );
 	} );
-} );
 
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.configurable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			cagd( "hello", "world", test );
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+			assert.equal( descriptor.writable, false );
+
+		} );
+	} );
+
+} );
 
 //: @end-client
 
@@ -111,10 +193,9 @@ describe( "cagd", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( `"impel( "property", "value" )"`, ( ) => {
-
-		it( "should be equal to value", ( ) => {
-
+	describe( "`cagd( 'hello', 'world', { } )`", ( ) => {
+		it( "should be equal to 'world'", ( ) => {
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 				function( ){
 					let test = { };
@@ -126,12 +207,10 @@ describe( "cagd", ( ) => {
 			assert.equal( result, "world" );
 
 		} );
-
 	} );
 
 
-	describe( "Property descriptor configurable", ( ) => {
-
+	describe( "`Property descriptor configurable`", ( ) => {
 		it( "should be equal to true", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -146,12 +225,10 @@ describe( "cagd", ( ) => {
 			assert.equal( result, true );
 
 		} );
-
 	} );
 
 
-	describe( "Property descriptor enumerable", ( ) => {
-
+	describe( "`Property descriptor enumerable`", ( ) => {
 		it( "should be equal to true", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -166,12 +243,10 @@ describe( "cagd", ( ) => {
 			assert.equal( result, true );
 
 		} );
-
 	} );
 
 
-	describe( "Property descriptor writable", ( ) => {
-
+	describe( "`Property descriptor writable`", ( ) => {
 		it( "should be equal to false", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -186,7 +261,6 @@ describe( "cagd", ( ) => {
 			assert.equal( result, false );
 
 		} );
-
 	} );
 
 } );
